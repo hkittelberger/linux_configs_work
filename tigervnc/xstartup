@@ -1,0 +1,28 @@
+#!/bin/sh
+#  File: sbsrc/templates/.default_vnc_xstartup_template
+#
+#  Abstract:
+#     SBTools xstartup file to use with VNC servers.
+#
+#     It sources a common VNC config that should not be modified locally.
+#     It also includes a Customizable section.
+#
+#     To install this configuration (e.g. ~/.vnc/xstartup),
+#     run sbsetupunix and follow the instructions.
+#
+#     xstartup will search for a working window manager.
+#     If you'd like to use a specific window manager such as xfce4, define it via:
+#       (tcsh) setenv SBTOOLS_VNC_WINDOW_MGR startxfce4
+#       (bash) export SBTOOLS_VNC_WINDOW_MGR=startxfce4
+#       sbvncserver
+#
+#  Generation:
+#      This is generated via SBTOOLS/sbsrc/templates/Makefile
+#
+
+# Note, this file is not used sbhostlease and sbvncserver (except on Debian 7).
+
+##### --- Required VNC Configuration starts here  --- #####
+. /mathworks/hub/share/sbtools/xstartup_master
+##### --- Required VNC Configuration ends here  --- #####
+# Don't put anything past here -- xstartup_master never exits
